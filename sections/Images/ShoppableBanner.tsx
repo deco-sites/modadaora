@@ -38,8 +38,7 @@ const DEFAULT_PROPS: Props = {
   },
   pins: [],
   image: {
-    mobile:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/aa071a4a-fd37-4efa-abf1-f736af0409a3",
+    mobile: "https://images.hdqwalls.com/wallpapers/fashion-model-4k-9k.jpg",
     altText: "capybara",
   },
 };
@@ -49,7 +48,7 @@ export default function ShoppableBanner(props: Props) {
 
   return (
     <div class="container">
-      <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-[70%_30%]">
+      <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-[100%]">
         <figure class="relative">
           <Picture>
             <Source
@@ -98,9 +97,9 @@ export default function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{title}</h2>
-          <p>{text}</p>
+        <div class="card-body absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[70%] max-h-min max-w-[335px] flex flex-col gap-4 p-4 rounded glass">
+          <h2 class="card-title text-white">{title}</h2>
+          <p class="text-white">{text}</p>
           <div class="card-actions justify-end">
             <a class="btn btn-primary" href={link?.href}>{link?.text}</a>
           </div>

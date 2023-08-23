@@ -42,7 +42,7 @@ const DEFAULT_PROPS: Props = {
 
 export default function Newsletter(props: Props) {
   const { title, description, form, layout } = { ...DEFAULT_PROPS, ...props };
-  const isReverse = layout?.content?.bgColor === "Reverse";
+  const isReverse = layout?.content?.bgColor == "Reverse";
   const bordered = Boolean(layout?.content?.border);
 
   const headerLayout = (
@@ -50,7 +50,7 @@ export default function Newsletter(props: Props) {
       title={title}
       description={description}
       alignment={layout?.content?.alignment === "Left" ? "left" : "center"}
-      colorReverse={isReverse}
+      colorReverse={!isReverse}
       fontSize={layout?.headerFontSize}
     />
   );
